@@ -41,9 +41,8 @@ export default class CryptoSymbol extends React.Component {
 					return _val.includes(target.value.toLowerCase());
 				}
 			);
-			console.log(_filteredData.slice(0, 5));
 			this.setState({
-				filteredData: _filteredData
+				filteredData: _filteredData.slice(0, 5)
 			});
 		}
 
@@ -85,7 +84,7 @@ export default class CryptoSymbol extends React.Component {
 
 		return (
 			<div className="form-group col-12 col-sm-6">
-				<input type="text" className="form-control" placeholder="Enter crypto symbol" onChange={this.handleChange}></input>
+				<input type="text" id="cryptoDef" className="form-control" placeholder="Enter crypto symbol" onChange={this.handleChange}></input>
 
 				<div className="row p-2">
 					{this.state.showSuggestion ? this.renderSuggestionBox() :
