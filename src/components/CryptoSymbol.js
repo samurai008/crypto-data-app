@@ -41,7 +41,10 @@ export default class CryptoSymbol extends React.Component {
 					return _val.includes(target.value.toLowerCase());
 				}
 			);
-			console.log(_filteredData.slice(1, 5));
+			console.log(_filteredData.slice(0, 5));
+			this.setState({
+				filteredData: _filteredData
+			});
 		}
 
 		// let _filteredData = this.state.coinList.filter(
@@ -61,8 +64,8 @@ export default class CryptoSymbol extends React.Component {
 		const loader = 'Loading coins...'
 		let listItems = <li className="list-group-item">{loader}</li>;
 
-		if(this.state.coinList.length > 0) {
-			listItems = this.state.coinList.map(
+		if(this.state.filteredData.length > 0) {
+			listItems = this.state.filteredData.map(
 				(val, i) => {
 					return (
 						<li className="list-group-item" key={i}>{val.CoinName}</li>
