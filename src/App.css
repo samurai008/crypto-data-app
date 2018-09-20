@@ -1,0 +1,7 @@
+.App {
+  margin: 4rem 0;
+}
+
+.App > h3 {
+  text-transform: capitalize;
+}
