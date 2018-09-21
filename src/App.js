@@ -24,8 +24,6 @@ class App extends Component {
       <div className="App">
         <h3 className="text-center">cryptocurrencies</h3>
 
-        <h1 className="text-center"><span className="badge badge-pill badge-dark">$123.92</span></h1>
-
         <div className="container">
           <div className="row mt-4">
             <CryptoSymbol coinList={this.getCoinList.bind(this)}></CryptoSymbol>
