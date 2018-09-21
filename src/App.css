@@ -5,3 +5,17 @@
 .App > h3 {
   text-transform: capitalize;
 }
+
+.bd-highlight {
+  font-size: 9px;
+}
+
+.currency-container {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
